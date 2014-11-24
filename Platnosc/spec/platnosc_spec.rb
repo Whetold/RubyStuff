@@ -43,9 +43,54 @@ describe Paypal do
 		it "returns false if there isn't such from exchange value in program" do
 			expect(cannot.checkifpossibletoexchange).to eq(false)
 		end
-	
-	
-	
-	
 end
-end
+		
+		describe "#exchange" do
+		let (:ten) {Paypal.new().valuessetup([10, "PLN", "USD"]).exchange(0.287966)}
+		let (:bad) {Paypal.new().valuessetup([10, "PLN", "USD"]).exchange(0.287966)}
+		
+		it "The value is goodly multiplied" do
+			expect(ten.to eq(2.88))
+		end
+			it "The value is goodly multiplied" do
+				expect(bad.to eq(3))
+			end
+		end
+		
+		
+			describe "#international" do
+			let (:ten) {Paypal.new().valuessetup([10, "PLN", "USD"]).international}
+			let (:twenty) {Paypal.new().valuessetup([20, "PLN", "USD"]).international}
+		
+			it "International is counted goodly" do
+				expect(ten.to eq(1.75))
+			end
+			it "International is counted goodly" do
+				expect(twenty.to eq(2.15))
+			end
+			end
+		
+			describe "#international" do
+			let (:tenc) {Paypal.new().valuessetup([10, "PLN", "USD"]).country}
+			let (:twentyc) {Paypal.new().valuessetup([20, "PLN", "USD"]).country}
+		
+			it "Country is counted goodly" do
+				expect(tenc.to eq(1.00))
+			end
+			it "Country is counted goodly" do
+				expect(twentyc.to eq(1.20))
+			end
+			end
+=begin
+need last fixes 
+			describe "#fpln2eur" do
+				it "Returns correct value" do
+					expect(fpln2eur)to eg(0.228693)
+				end
+			end
+=end		
+		
+		
+		end
+		
+		

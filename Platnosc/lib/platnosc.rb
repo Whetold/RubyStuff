@@ -22,10 +22,14 @@ def checkifpossibletoexchange
 
 end
 end 
+def printexchange(exchanged)
+puts "\n#{self[1]} #{self[0]} in #{self[2]} is #{exchanged}" 
 
+
+end
 def exchange(multip)
 exchanged = (self[0].to_f * multip).round(2)
-puts "\n#{self[1]} #{self[0]} in #{self[2]} is #{exchanged}" 
+
 return exchanged
 end
 def printsendmoneyinter

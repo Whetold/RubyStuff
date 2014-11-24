@@ -19,38 +19,38 @@ case menu
 	when "PLN"
 		case values[2]
 			when "SEK"
-			a.exchange(a.fpln2sek)
+				a.printexchange(a.exchange(a.fpln2sek))
 			when "EUR"
-			a.exchange(a.fpln2eur)
+				a.printexchange(a.exchange(a.fpln2eur))
 			when "USD"
-			a.exchange(a.fpln2usd)
+				a.printexchange(a.exchange(a.fpln2usd))
 			end
 	when "EUR"
 		case values[2]
 			when "SEK"
-			a.exchange(a.feur2sek)
+			a.printexchange(a.exchange(a.feur2sek))
 			when "PLN"
-			a.exchange(a.feur2pln)
+			a.printexchange(a.exchange(a.feur2pln))
 			when "USD"
-			a.exchange(a.feur2usd)
+			a.printexchange(a.exchange(a.feur2usd))
 			end
 	when "USD"
 		case values[2]
 			when "SEK"
-			a.exchange(a.fusd2sek)
+			a.printexchange(a.exchange(a.fusd2sek))
 			when "PLN"
-			a.exchange(a.fusd2pln)
+			a.printexchange(a.exchange(a.fusd2pln))
 			when "EUR"
-			a.exchange(a.fusd2eur)
+			a.printexchange(a.exchange(a.fusd2eur))
 			end				
 	when "SEK"
 		case values[2]
 			when "PLN"
-			a.exchange(a.fsek2pln)
+			a.printexchange(a.exchange(a.fsek2pln))
 			when "EUR"
-			a.exchange(a.fsek2eur)
+			a.printexchange(a.exchange(a.fsek2eur))
 			when "USD"
-			a.exchange(a.fsek2usd)
+			a.printexchange(a.exchange(a.fsek2usd))
 			end
 
 	end
