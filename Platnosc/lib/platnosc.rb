@@ -6,7 +6,7 @@ def valuessetup(arr)
 		self[i] = arr[i]
 		
 	end
-
+	
 	return self
 end
 
@@ -26,9 +26,30 @@ end
 def exchange(multip)
 exchanged = (self[0].to_f * multip).round(2)
 puts "\n#{self[1]} #{self[0]} in #{self[2]} is #{exchanged}" 
-
+return exchanged
+end
+def printsendmoneyinter
+	fee = international
+	puts "podatek: #{fee}"
+end
+def printsendmoneycountry
+	fee = country
+	puts "podatek: #{fee}"
 end
 
+def international 
+self[0] = 	((self[0].to_f * 4 ) / 100 ).round(2)
+self[0] +=  1.35
+return self[0]
+end
+
+def country
+
+self[0] = ((self[0].to_f * 2 ) / 100 ).round(2)
+self[0] += 0.80
+return self[0]
+
+end
 def fpln2eur
 return 0.228693
 end
