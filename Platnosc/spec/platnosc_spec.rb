@@ -15,7 +15,7 @@ describe Paypal do
 	end
 	
 	describe "#valuessetup" do
-		let(:ary) { ary = [1,2,3] }
+		let(:ary) { ary = [10, "PLN", "USD"] }
 
 		it "Sets values" do
 			expect(Paypal.new().valuessetup(ary)).to eq([10, "PLN", "USD"])
@@ -28,20 +28,24 @@ describe Paypal do
 				Paypal.valuessetup(ary).lenght.to eq(leng)
 			}
 		end
-	
+	end
 	
 		describe "#checkifpossibletoexchange" do
-			let(:can) {Paypal.new().valuessetup([10, "PLN", "USD"]).checkifpossibletoexchange)}
-			let(:cannot) {Paypal.new().valuessetup([10, "PLN", "RUB"]).checkifpossibletoexchange)}
+			let(:can) {Paypal.new().valuessetup([10, "PLN", "USD"])}
+			let(:cannot) {Paypal.new().valuessetup([10, "PLN", "RUB"])}
+			let(:cannotfirst) {Paypal.new().valuessetup([10, "RUB", "PLN"])}
 		it "returns true if there is such value in program" do
 			expect(can.checkifpossibletoexchange).to eq(true)
 		end
-		it "returns false if there isn't such value in program" do
+		it "returns false if there isn't such to exchange value in program" do
 			expect(cannot.checkifpossibletoexchange).to eq(false)
 		end
-		
+		it "returns false if there isn't such from exchange value in program" do
+			expect(cannot.checkifpossibletoexchange).to eq(false)
+		end
 	
 	
 	
 	
+end
 end
