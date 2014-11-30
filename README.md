@@ -1,5 +1,5 @@
 RubyStuff
 =========
 
-Platnosc to integration test
+Platnosc to unity test
 
