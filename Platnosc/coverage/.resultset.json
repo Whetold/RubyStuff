@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/whiti/Pulpit/Ruby/gitrepo/RubyStuff/Platnosc/lib/platnosc.rb": [
+      "/home/whiti/Pulpit/Najnowszeruby/RubyStuff/Platnosc/lib/platnosc.rb": [
         null,
         1,
         null,
@@ -106,6 +106,6 @@
         null
       ]
     },
-    "timestamp": 1416866520
+    "timestamp": 1417373232
   }
 }
