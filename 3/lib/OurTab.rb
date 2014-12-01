@@ -1,5 +1,5 @@
 require_relative 'Qsort.rb'
-#
+#Github doesn't want to change indent size
 class OurTab < Array
 	include Qsort
 
