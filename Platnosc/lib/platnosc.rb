@@ -3,8 +3,7 @@ class Paypal < Array
 
 def valuessetup(arr)
 	for i in (0..arr.length-1) do
-		self[i] = arr[i]
-		
+		self[i] = arr[i]		
 	end
 	
 	return self
