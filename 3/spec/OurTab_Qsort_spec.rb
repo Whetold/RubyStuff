@@ -30,9 +30,11 @@ describe Qsort do
 	end	
 
 	describe "#quicksort" do
-	let(:magic) { OurTab.new().setS([10,2,1,5]).quicksort(self, 10, 5)}
+	let(:magic) { a = OurTab.new().setS([10,5,2,1])
+								a.quicksort(a,0,3)
+							}
 		it "Should put numbers in increasing order" do
-			expect(magic).to eq(nil)
+			expect(magic).to eq([1,2,5,10])
 		end
 	end
 end
