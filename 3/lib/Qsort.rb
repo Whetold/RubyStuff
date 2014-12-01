@@ -12,7 +12,7 @@ module Qsort
 
 		if first >= last 
 		#done sort
-		return
+		return self
 
 		end
 
@@ -49,17 +49,29 @@ module Qsort
 
 	def increaseit(howmany)
 		for i in (0..self.length - 1) do 
-			self[i] = self[i] + 1
+			
+			self[i] += howmany
+			
+			
 		end
+		return self
+	end
+	def decreaseit(howmany)
+		for i in (0..self.length - 1) do 
+			
+			self[i] = self[i] - howmany
+			
+			
+		end
+		return self
+	end
+	def deletethat(a)
+		
+			self.delete(a)
+			return self
 	end
 
-	def reset()
-		for i in (0.. self.length - 1) do
-			self[i] = 0
-		end
-	end
-
-	def dosomethingfunny()
+	def dosomethingfunny
 		puts "There is nothing funny in testing"
 	end
 
